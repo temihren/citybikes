@@ -1,0 +1,35 @@
+.stationsList {
+    overflow: auto;
+    max-height: 100%;
+    border: 1px solid #8AC9FF;
+    border-radius: 4px;
+}
+
+.stationsTitle {
+    text-align: right;
+    font-size: 20px;
+    margin: 2px 0 5px 0;
+}
+
+.divider {
+    height: 1px;
+    width: 100%;
+    border: none;
+    flex-shrink: 0;
+    margin: 0;
+    background: black;
+}
+
+.heartIcon {
+    max-width: 20px;
+    position: absolute;
+    right: 0;
+}
+
+.station {
+    position: relative;
+    display: flex;
+    padding-right: 25px;
+    align-items: center;
+    justify-content: space-between;
+}

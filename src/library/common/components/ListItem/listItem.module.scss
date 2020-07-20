@@ -1,0 +1,19 @@
+.ListItem {
+    padding: 10px 15px;
+    margin: 0px 0;
+    width: 100%;
+    border-bottom: 1px solid;
+    border-color: #BEE1FF;
+    cursor: pointer;
+    transition: 0.10s border-color;
+    background-color: #FFF;
+
+    &:hover {
+        border-color: #868A8D;
+    }
+
+    &__selected {
+        background-color: #dcefff;
+        border-color: transparent;
+    }
+}
