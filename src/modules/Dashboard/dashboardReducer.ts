@@ -1,4 +1,5 @@
 import {combineReducers} from 'redux';
+
 import networksReducer from 'modules/Dashboard/dashboardFrames/NetworksFrame/networksReducer';
 import stationsReducer from 'modules/Dashboard/dashboardFrames/StationsFrame/stationsReducer';
 

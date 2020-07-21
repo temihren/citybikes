@@ -1,4 +1,5 @@
 import {all, takeLatest, put, call} from 'redux-saga/effects';
+
 import {networksRequest} from 'library/api/networksApi';
 import stationsSaga from 'modules/Dashboard/dashboardFrames/StationsFrame/stationsSaga';
 import removeArrayItemsDuplicates from 'library/common/utilities/removeArrayItemsDuplicates';

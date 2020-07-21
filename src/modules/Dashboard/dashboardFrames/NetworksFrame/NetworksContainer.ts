@@ -1,4 +1,5 @@
 import {connect} from 'react-redux';
+
 import {IRootState} from 'main/store/configureStore';
 import {requestNetworks} from 'modules/Dashboard/dashboardFrames/NetworksFrame/networksActions';
 import {requestStations} from 'modules/Dashboard/dashboardFrames/StationsFrame/stationsActions';

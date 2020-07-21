@@ -1,4 +1,5 @@
 import {connect} from 'react-redux';
+
 import DashboardModule from 'modules/Dashboard/DashboardModule';
 import {IRootState} from 'main/store/configureStore';
 

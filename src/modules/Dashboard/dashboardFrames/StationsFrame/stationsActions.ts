@@ -1,6 +1,7 @@
 import {
 	createAction, createCustomAction,
 } from 'typesafe-actions';
+
 import {INetwork, IStation} from 'library/common/types/dashboard';
 
 import stationsActionTypes from './stationsConstants';

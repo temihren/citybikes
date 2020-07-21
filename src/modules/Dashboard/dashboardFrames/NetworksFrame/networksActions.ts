@@ -1,6 +1,7 @@
 import {
 	createAction, createCustomAction,
 } from 'typesafe-actions';
+
 import {INetwork} from 'library/common/types/dashboard';
 
 import networksActionTypes from './networksConstants';
