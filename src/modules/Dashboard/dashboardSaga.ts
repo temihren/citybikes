@@ -9,11 +9,15 @@ import * as networksActions from './dashboardFrames/NetworksFrame/networksAction
 import {requestStations} from './dashboardFrames/StationsFrame/stationsActions';
 
 function* initDashboardSaga() {
-    const networksResponse = yield call(networksRequest);
-    yield put(networksActions.requestNetworksSuccess(
-        removeArrayItemsDuplicates(networksResponse.data.networks)
-    ));
-    yield put(requestStations(networksResponse.data.networks[0]));
+    try {
+        const networksResponse = yield call(networksRequest);
+        yield put(networksActions.requestNetworksSuccess(
+            removeArrayItemsDuplicates(networksResponse.data.networks)
+        ));
+        yield put(requestStations(networksResponse.data.networks[0]));
+    } catch (error) {
+        yield put(networksActions.requestNetworksError());
+    }
 };
 
 function* watchDashboard() {
