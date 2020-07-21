@@ -1,8 +1,15 @@
-import React, { ReactElement } from 'react';
+import React, {ReactElement} from 'react';
+
 import styles from './panel.module.scss';
 
-export default ({children}: {children: ReactElement}) => (
+interface IPanelProps {
+    children: ReactElement;
+}
+
+const Panel = ({children}: IPanelProps) => (
     <div className={styles.Panel}>
         {children}
     </div>
 )
+
+export default Panel;

@@ -1,5 +1,6 @@
 import {connect} from 'react-redux';
 import {IRootState} from 'main/store/configureStore';
+
 import Stations from './StationsFrame';
 import {getStationsList, getStationsLoading, getLikedStations} from './stationsGetters';
 import {requestStations, toggleStationLike} from './stationsActions';

@@ -1,13 +1,25 @@
 import React from 'react';
-import {IStationsProps} from './stationsTypes';
-import styles from './stationsStyles.module.scss';
 import Panel from 'library/common/components/Panel/Panel';
 import ListItem from 'library/common/components/ListItem/ListItem';
 import Loader from 'library/common/components/Loader/Loader';
 import Title from 'library/common/components/Title/Title';
+import {IStation} from 'library/common/types/dashboard';
 import likeSVG from 'resources/images/heart.svg';
 
-export default ({loading, stations, likedStations, toggleStationLike, currentNetwork}: IStationsProps) => (
+import styles from './stationsStyles.module.scss';
+
+interface IStationsProps {
+    stations: IStation[];
+    loading: boolean;
+    likedStations: string[];
+    toggleStationLike: (id: string) => void;
+    currentNetwork: {
+        name: string;
+        id: string;
+    } | null;
+}
+
+const StationsFrame = ({loading, stations, likedStations, toggleStationLike, currentNetwork}: IStationsProps) => (
     <Panel>
         <>
             <Title text={'Stations'} side='right'/>
@@ -51,3 +63,5 @@ export default ({loading, stations, likedStations, toggleStationLike, currentNet
         </>
     </Panel>
 )
+
+export default StationsFrame;

@@ -1,11 +1,11 @@
 import {all, takeLatest, put, call} from 'redux-saga/effects';
-import dashboardActionTypes from './dashboardConstants';
-
-import * as networksActions from './dashboardFrames/NetworksFrame/networksActions';
-import stationsSaga from 'modules/Dashboard/dashboardFrames/StationsFrame/stationsSaga';
-import {requestStations} from './dashboardFrames/StationsFrame/stationsActions';
 import {networksRequest} from 'library/api/networksApi';
+import stationsSaga from 'modules/Dashboard/dashboardFrames/StationsFrame/stationsSaga';
 import removeArrayItemsDuplicates from 'library/common/utilities/removeArrayItemsDuplicates';
+
+import dashboardActionTypes from './dashboardConstants';
+import * as networksActions from './dashboardFrames/NetworksFrame/networksActions';
+import {requestStations} from './dashboardFrames/StationsFrame/stationsActions';
 
 function* initDashboardSaga() {
     const networksResponse = yield call(networksRequest);

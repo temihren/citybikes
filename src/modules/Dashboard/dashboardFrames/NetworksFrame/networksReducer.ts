@@ -1,7 +1,7 @@
 import {ActionType, getType, StateType} from 'typesafe-actions';
-import * as networksActions from './networksActions';
 
-import {IInitialNetworksState} from './networksTypes.d';
+import * as networksActions from './networksActions';
+import {IInitialNetworksState} from './networksTypes';
 
 const initialState: IInitialNetworksState = {
     networks_list: [],

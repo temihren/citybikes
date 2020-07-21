@@ -1,7 +1,7 @@
 import {ActionType, getType, StateType} from 'typesafe-actions';
-import * as stationsActions from './stationsActions';
 
-import {IInitialStationsState} from './stationsTypes.d';
+import * as stationsActions from './stationsActions';
+import {IInitialStationsState} from './stationsTypes';
 
 const initialState: IInitialStationsState = {
     stations_list: [],

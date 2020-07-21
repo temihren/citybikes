@@ -1,8 +1,9 @@
 import {takeLatest, call, put} from 'redux-saga/effects';
+import {stationsRequest} from 'library/api/stationsApi';
+
 import stationActionTypes from './stationsConstants';
 import * as stationsActions from './stationsActions';
 import * as networkActions from '../NetworksFrame/networksActions';
-import {stationsRequest} from 'library/api/stationsApi';
 
 function* requestStationsSaga(action: ReturnType<typeof stationsActions.requestStations>) {
     try {

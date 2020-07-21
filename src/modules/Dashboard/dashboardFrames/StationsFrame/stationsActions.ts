@@ -1,14 +1,15 @@
 import {
 	createAction, createCustomAction,
 } from 'typesafe-actions';
+import {INetwork, IStation} from 'library/common/types/dashboard';
+
 import stationsActionTypes from './stationsConstants';
-import { INetwork } from 'library/common/types/dashboard';
 
 export const requestStations =
     createCustomAction(stationsActionTypes.REQUEST_STATIONS, (network: INetwork) => ({network}));
 
 export const requestStationsSuccess =
-    createCustomAction(stationsActionTypes.REQUEST_STATIONS_SUCCESS, (stations: any[]) => ({stations}));
+    createCustomAction(stationsActionTypes.REQUEST_STATIONS_SUCCESS, (stations: IStation[]) => ({stations}));
 
 export const requestStationsError =
     createAction(stationsActionTypes.REQUEST_STATIONS_ERROR)();

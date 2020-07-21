@@ -1,11 +1,18 @@
-import React, { useEffect } from 'react';
-import styles from './dashboardStyles.module.scss';
+import React, {useEffect} from 'react';
 
+import styles from './dashboardStyles.module.scss';
 import Networks from './dashboardFrames/NetworksFrame/NetworksContainer';
 import Stations from './dashboardFrames/StationsFrame/StationsContainer';
-import {IDashboardModuleProps} from './dashboard';
 
-export default ({initDashboard, currentNetwork}: IDashboardModuleProps) => {
+interface IDashboardModuleProps {
+    initDashboard: () => void;
+    currentNetwork: {
+        name: string;
+        id: string;
+    } | null;
+}
+
+const DashboardModule = ({initDashboard, currentNetwork}: IDashboardModuleProps) => {
     useEffect(() => {
         initDashboard();
     }, [initDashboard]);
@@ -17,3 +24,5 @@ export default ({initDashboard, currentNetwork}: IDashboardModuleProps) => {
         </div>
     )
 }
+
+export default DashboardModule;
